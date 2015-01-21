@@ -1,14 +1,21 @@
-<form action="/videos" method="post">
-  <label for="title">Title:</label>
-  <input type="text" id="title" name="video[title]">
-
-  <label for="description">Description:</label>
-  <input type="text" id="description" name="video[description]">
-
-  <label for="youtube_id">Youtube ID:</label>
-  <input type="text" id="youtube_id" name="video[youtube_id]">
-
-  <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
-
-  <input type="submit" value="submit">
-</form>
+<div class="new-vid-container">
+  <div><h1>New Video</h1></div>
+  <form action="/videos" method="post">
+    <div id="video-title">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="video[title]">
+    </div>
+    <div id="video-desc">
+      <label for="description">Description:</label>
+      <input type="text" id="description" name="video[description]">
+    </div>
+    <div id="video-youtube">
+      <label for="youtube_id">Youtube ID:</label>
+      <input type="text" id="youtube_id" name="video[youtube_id]">
+    </div>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div id="video-submit">
+      <input type="submit" value="submit">
+    </div>
+  </form>
+</div>
