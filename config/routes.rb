@@ -1,5 +1,6 @@
 Metube::Application.routes.draw do
   root to: "videos#index"
+  get "/videos/new", to: "videos#new"
   get "/videos", to: "videos#index"
   get "/videos/:id", to: "videos#show"
 
