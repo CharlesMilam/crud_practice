@@ -25,7 +25,7 @@ class SoundsController < ApplicationController
     puts "in sounds update"
     @sound = Sound.find(params[:id])
     @sound.update(sound_params)
-    redirect_to root_path
+    redirect_to "/sounds"
   end
 
   def destroy
