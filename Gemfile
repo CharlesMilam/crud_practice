@@ -9,6 +9,9 @@ gem 'sqlite3'
 
 gem 'pry-byebug'
 
+# Use hirb to pretty print tables in console
+gem "hirb"
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
