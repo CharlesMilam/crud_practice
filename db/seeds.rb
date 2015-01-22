@@ -47,3 +47,18 @@ Sound.create([
     soundcloud_url: "https://soundcloud.com/makersquare/sitcom-don"
   }
 ])
+
+Comment.create([
+  {
+    video_id: 1,
+    content: "Great stuff."
+  },
+  {
+    video_id: 1,
+    content: "Fantastic."
+  },
+  {
+    video_id: 3,
+    content: "One of my favorites."
+  }
+])
