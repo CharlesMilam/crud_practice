@@ -9,6 +9,9 @@ gem 'sqlite3'
 
 gem 'pry-byebug'
 
+# User foundations framework for css styling
+gem "foundation-rails"
+
 # Use hirb to pretty print tables in console
 gem "hirb"
 
