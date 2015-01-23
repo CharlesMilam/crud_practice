@@ -14,7 +14,7 @@ class SoundsController < ApplicationController
   def create
     sound = Sound.new(sound_params)
     sound.save
-    redirect_to root_path
+    redirect_to sounds_path
   end
 
   def edit
@@ -25,13 +25,13 @@ class SoundsController < ApplicationController
     puts "in sounds update"
     @sound = Sound.find(params[:id])
     @sound.update(sound_params)
-    redirect_to "/sounds"
+    redirect_to sounds_path
   end
 
   def destroy
     @sound = Sound.find(params[:id])
     @sound.destroy
-    redirect_to root_path
+    redirect_to sounds_path
   end
 
   private
