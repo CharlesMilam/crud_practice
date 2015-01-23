@@ -1,3 +1,3 @@
 class Sound < ActiveRecord::Base
-  had_many :comments as: :media
+  has_many :comments as: :media
 end
