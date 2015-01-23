@@ -11,11 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150121220447) do
+ActiveRecord::Schema.define(version: 20150123050218) do
 
   create_table "comments", force: true do |t|
-    t.integer  "video_id"
-    t.text     "content"
+    t.string   "content"
+    t.integer  "media_id"
+    t.string   "media_type"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
