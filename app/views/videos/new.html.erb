@@ -1,21 +1,20 @@
 <div class="new-vid-container">
-  <div><h1>New Video</h1></div>
+  <div><h1>Add a New Video</h1></div>
   <%= form_for Video.new do |f| %>
     <div id="video-title">
       <%= f.label :title %>
       <%= f.text_field :title %>
     </div>
     <div id="video-desc">
-      <f.label :description">Description:</label>
-      <input type="text" id="description" name="video[description]">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
     </div>
     <div id="video-youtube">
-      <label for="youtube_id">Youtube ID:</label>
-      <input type="text" id="youtube_id" name="video[youtube_id]">
+      <%= f.label :youtube_id %>
+      <%= f.text_field :youtube_id %>
     </div>
-    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
     <div id="video-submit">
-      <input type="submit" value="add video">
+      <%= f.submit "add video" %>
     </div>
-  </form>
+  <% end %>
 </div>
