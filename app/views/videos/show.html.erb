@@ -1,0 +1,23 @@
+<div id="video-container">
+  <h1><%= @video.title %></h1>
+
+  <h3><%= @video.description %></h3>
+
+  <iframe width="420" height="315" src="//www.youtube.com/embed/<%= @video.youtube_id %>" frameborder="0" allowfullscreen></iframe>
+
+  <h2>Comments</h2>
+    <% @video.comments.each do |comment| %>
+    <p>
+      <strong>Comment:</strong>
+      <%= comment.content %>
+    </p>
+  <% end %>
+
+  <%= form_for @comment, {url: video_comments_path(@video)} do |f| %>
+    <%= f.hidden_field :video_id, value: @video.id %>
+    <%= f.label :content, "Add a comment" %><br>
+    <%= f.text_area :content, size: "60x12" %><br>
+    <%= f.submit "add comment" %>
+  <% end %>
+
+</div>

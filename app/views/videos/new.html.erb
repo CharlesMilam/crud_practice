@@ -1,0 +1,20 @@
+<div class="new-vid-container">
+  <div><h1>Add a New Video</h1></div>
+  <%= form_for Video.new do |f| %>
+    <div id="video-title">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div id="video-desc">
+      <%= f.label :description %>
+      <%= f.text_field :description %>
+    </div>
+    <div id="video-youtube">
+      <%= f.label :youtube_id %>
+      <%= f.text_field :youtube_id %>
+    </div>
+    <div id="video-submit">
+      <%= f.submit "add video" %>
+    </div>
+  <% end %>
+</div>

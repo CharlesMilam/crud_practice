@@ -1,0 +1,19 @@
+<div class="new-sound-container">
+  <div><h1>Edit Sound</h1></div>
+  <form action="/sounds/<%= @sound.id %>" method="post">
+  
+  <input name="_method" type="hidden" value="put">
+    <div id="sound-title">
+      <label for="title">Title:</label>
+      <input type="text" id="title" name="sound[title]" value="<%= @sound.title %>">
+    </div>
+    <div id="sound-soundcloud">
+      <label for="soundcloud_url">Soundcloud URL:</label>
+      <input type="text" id="soundcloud_url" name="sound[soundcloud_url]" value="<%= @sound.soundcloud_url %>">
+    </div>
+    <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+    <div id="sound-submit">
+      <input type="submit" value="edit sound">
+    </div>
+  </form>
+</div>
