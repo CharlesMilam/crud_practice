@@ -13,7 +13,7 @@
     </p>
   <% end %>
 
-  <%= form_for [@video, Comment.new] do |f| %>
+  <%= form_for @comment, {url: video_comments_path(@video)} do |f| %>
     <%= f.hidden_field :video_id, value: @video.id %>
     <%= f.label :content, "Add a comment" %><br>
     <%= f.text_area :content, size: "60x12" %><br>
