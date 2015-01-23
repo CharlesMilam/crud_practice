@@ -5,6 +5,8 @@ class SoundsController < ApplicationController
 
   def show
     @sound = Sound.find(params[:id])
+    @comments = @sound.comments
+    @comment = @sound.comments.new
   end
 
   def new
@@ -22,7 +24,6 @@ class SoundsController < ApplicationController
   end
 
   def update
-    puts "in sounds update"
     @sound = Sound.find(params[:id])
     @sound.update(sound_params)
     redirect_to sounds_path
